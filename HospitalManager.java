@@ -1,9 +1,13 @@
 public class HospitalManager {
 	private Patient patientListStart = null;
 	
-	public static void man(String[] args) {
-		HospitalManager manager = new HospitalManager;
+	public static void main(String[] args) {
+		HospitalManager manager = new HospitalManager();
 		manager.launch();
+	}
+	
+	public void prettyPrint(){
+		// add prettyPrint code here (see IntegerList.java for help
 	}
 	
 	private void launch() {
@@ -11,13 +15,21 @@ public class HospitalManager {
 		patientListStart = firstPatient;
 		Patient yetAnotherPatient = new Patient("Steve", 49, "Syphillis");
 		patientListStart.addPatient(yetAnotherPatient);
-		Patient yetAnotherPatient = new Patient("Alan", 49, "Syphillis");
+		yetAnotherPatient = new Patient("Alan", 49, "Syphillis");
 		patientListStart.addPatient(yetAnotherPatient);
-		Patient yetAnotherPatient = new Patient("Rod", 49, "Syphillis");
+		yetAnotherPatient = new Patient("Rod", 49, "Syphillis");
 		patientListStart.addPatient(yetAnotherPatient);
-		Patient yetAnotherPatient = new Patient("Mark", 49, "Syphillis");
+		yetAnotherPatient = new Patient("Mark", 49, "Syphillis");
 		patientListStart.addPatient(yetAnotherPatient);
-		Patient yetAnotherPatient = new Patient("Fi", 49, "Syphillis");
+		yetAnotherPatient = new Patient("Fi", 49, "Syphillis");
 		patientListStart.addPatient(yetAnotherPatient);
-		Patient yetAnotherPatient = new Patient("Richard", 49, "Syphillis");
+		yetAnotherPatient = new Patient("Richard", 49, "Syphillis");
 		patientListStart.addPatient(yetAnotherPatient);
+		
+		Patient temp = firstPatient; // Change this code using prettyPrint()
+		do {
+			temp.prettyPrint();
+			temp = temp.nextPatient;			
+		} while (temp.nextPatient!=null);
+	}
+}

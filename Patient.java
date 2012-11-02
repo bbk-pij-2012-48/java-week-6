@@ -24,9 +24,11 @@ public class Patient {
 			return false;
 		} else if(this.nextPatient.name.equals(patient.name)) {
 			// This is the patient we were after
-			this.nextpatient = nextPatient.nextPatient;
+			this.nextPatient = nextPatient.nextPatient;
+			return true;
 		} else {
 			return this.nextPatient.deletePatient(patient);
 		}
 	}
+	
 }
