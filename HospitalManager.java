@@ -1,13 +1,19 @@
 public class HospitalManager {
 	private Patient patientListStart = null;
 	
+	public void prettyPrint(){
+		Patient currentPatient = patientListStart;
+		while(currentPatient!=null) {
+			System.out.println(currentPatient.getName() + ", " + currentPatient.getAge() +
+						", " + currentPatient.getIllness());
+			currentPatient = currentPatient.getNextPatient();
+		}
+		System.out.println();
+	}
+	
 	public static void main(String[] args) {
 		HospitalManager manager = new HospitalManager();
 		manager.launch();
-	}
-	
-	public void prettyPrint(){
-		// add prettyPrint code here (see IntegerList.java for help
 	}
 	
 	private void launch() {
@@ -25,11 +31,11 @@ public class HospitalManager {
 		patientListStart.addPatient(yetAnotherPatient);
 		yetAnotherPatient = new Patient("Richard", 49, "Syphillis");
 		patientListStart.addPatient(yetAnotherPatient);
+		this.patientListStart.deletePatient("Richard"); 
+		this.patientListStart.deletePatient("Rod");
+		// not sure about how to define a patient in the list - maybe should just change 
+			// deletePatient(Patient) method to deletePatient(String) method to search for name
 		
-		Patient temp = firstPatient; // Change this code using prettyPrint()
-		do {
-			temp.prettyPrint();
-			temp = temp.nextPatient;			
-		} while (temp.nextPatient!=null);
+		this.prettyPrint();
 	}
 }
