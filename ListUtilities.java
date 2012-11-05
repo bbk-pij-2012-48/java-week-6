@@ -30,7 +30,7 @@ public class ListUtilities {
 		return dst;
 	}
 	
-	public static void bubbleSort(IntStack src) {
+	public static IntStack bubbleSort(IntStack src) {
 		int[] tmp = ListUtilities.stackToArray(src);
 		int temp;
 		boolean swap;
@@ -46,10 +46,10 @@ public class ListUtilities {
 				}
 			}
 			if(!swap) {
-				return;
+				
+				return ListUtilities.arrayToStack(tmp);
 			}
 		}
-		src = ListUtilities.arrayToStack(tmp);
-	}
-		
+		return ListUtilities.arrayToStack(tmp);
+	}	
 }
