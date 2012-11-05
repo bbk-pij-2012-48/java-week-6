@@ -43,7 +43,8 @@ public class IntQueue {
 	
 	public static void main(String[] args) {
 		IntQueue tester = new IntQueue();
-		
+		System.out.println(tester.size());
+				
 		IntNode newNode = new IntNode(5);
 		tester.insert(newNode);
 		
