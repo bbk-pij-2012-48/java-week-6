@@ -19,6 +19,10 @@ public class IntNode {
 	public void setNext(IntNode nextNode) {
 		this.nextInt = nextNode;
 	}
+	
+	public void setNext() {
+		this.nextInt = null;
+	}
 }
 	
 	

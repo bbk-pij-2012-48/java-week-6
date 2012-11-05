@@ -15,10 +15,36 @@ public class IntQueue {
 		IntNode current = this.first;
 		while (current.getNext()!=null) {
 			if (current.getNext().getNext()==null) {
-				current.getNext(). // carry on from here*********************
-				
-			current = current.getNext();
+				current.setNext();
+			} else {
+				current = current.getNext();
+			}
 		}
 		
 	}
+	
+	public void prettyPrint() {
+		IntNode current = this.first;
+		while (current != null) {
+			System.out.println(current.getValue());
+			current = current.getNext();
+		}
+	}
+	
+	public static void main(String[] args) {
+		IntQueue tester = new IntQueue();
+		
+		IntNode newNode = new IntNode(5);
+		tester.insert(newNode);
+		
+		newNode = new IntNode(12);
+		tester.insert(newNode);
+		
+		tester.prettyPrint();
+		
+		tester.retrieve();
+		
+		tester.prettyPrint();
+	}		
+}
 		
