@@ -50,12 +50,21 @@ public class HospitalManager {
 		this.prettyPrint();
 		this.prettyPrintBackwards();
 		
-		this.patientListStart.deletePatient("Richard"); 
-		this.patientListStart.deletePatient("Rod");
+		patientListStart.deletePatient("Richard"); 
+		patientListStart.deletePatient("Rod");
 		// not sure about how to define a patient in the list - maybe should just change 
 			// deletePatient(Patient) method to deletePatient(String) method to search for name
 		
 		this.prettyPrint();
 		this.prettyPrintBackwards();
+		
+		yetAnotherPatient = new Patient("Mia", 18, "Crohn's Disease");
+		patientListStart.addPatient(yetAnotherPatient);
+		
+		patientListStart.deletePatient("Janina");
+		
+		this.prettyPrint();
+		this.prettyPrintBackwards();
+		
 	}
 }
