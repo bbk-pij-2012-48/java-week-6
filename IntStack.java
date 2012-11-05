@@ -6,6 +6,10 @@ public class IntStack {
 		this.first = null;
 	}
 	
+	public IntNode getFirst() {
+		return first;
+	}
+	
 	public void push(IntNode newNode) {
 		newNode.setNext(this.first);
 		this.first = newNode;
