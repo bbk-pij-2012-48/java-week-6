@@ -23,6 +23,16 @@ public class IntQueue {
 		
 	}
 	
+	public int size() {
+		IntNode current = this.first;
+		int counter = 0;
+		while(current != null) {
+			counter++;
+			current = current.getNext();
+		}
+		return counter;
+	}
+	
 	public void prettyPrint() {
 		IntNode current = this.first;
 		while (current != null) {
@@ -41,10 +51,12 @@ public class IntQueue {
 		tester.insert(newNode);
 		
 		tester.prettyPrint();
+		System.out.println(tester.size());
 		
 		tester.retrieve();
 		
 		tester.prettyPrint();
+		System.out.println(tester.size());
 	}		
 }
 		
