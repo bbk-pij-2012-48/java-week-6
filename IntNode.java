@@ -16,8 +16,8 @@ public class IntNode {
 		return this.nextInt;
 	}
 	
-	public void setNext(int value) {
-		this.nextInt = new IntNode(value);
+	public void setNext(IntNode nextNode) {
+		this.nextInt = nextNode;
 	}
 }
 	
